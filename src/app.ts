@@ -1,20 +1,20 @@
 import express, { Application } from 'express';
 import cors from 'cors';
 import { createServer } from 'http';
-import { connectDatabase } from './config/database';
-import { SocketService } from './services/socketService';
-import { NotificationService } from './services/notificationService';
-import { setNotificationService } from './controllers/notificationController';
+import { connectDatabase } from './config/database.js';
+import { SocketService } from './services/socketService.js';
+import { NotificationService } from './services/notificationService.js';
+import { setNotificationService } from './controllers/notificationController.js';
 
 // Import routes
-import authRoutes from './routes/authRoutes';
-import patientRoutes from './routes/patientRoutes';
-import caseRoutes from './routes/caseRoutes';
-import discussionRoutes from './routes/discussionRoutes';
-import medicalRecordRoutes from './routes/medicalRecordRoutes';
-import referralRoutes from './routes/referralRoutes';
-import emergencyRoutes from './routes/emergencyRoutes';
-import notificationRoutes from './routes/notificationRoutes';
+import authRoutes from './routes/authRoutes.js';
+import patientRoutes from './routes/patientRoutes.js';
+import caseRoutes from './routes/caseRoutes.js';
+import discussionRoutes from './routes/discussionRoutes.js';
+import medicalRecordRoutes from './routes/medicalRecordRoutes.js';
+import referralRoutes from './routes/referralRoutes.js';
+import emergencyRoutes from './routes/emergencyRoutes.js';
+import notificationRoutes from './routes/notificationRoutes.js';
 
 export class App {
   public app: Application;

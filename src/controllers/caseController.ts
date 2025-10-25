@@ -1,8 +1,8 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/auth';
-import Case from '../models/Case';
-import Discussion from '../models/Discussion';
-import { CaseStatus, CasePriority } from '../types';
+import { AuthRequest } from '../middleware/auth.js';
+import Case from '../models/Case.js';
+import Discussion from '../models/Discussion.js';
+import { CaseStatus, CasePriority } from '../types/index.js';
 
 export class CaseController {
   static async createCase(req: AuthRequest, res: Response): Promise<void> {

@@ -1,8 +1,8 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/auth';
-import MedicalRecord from '../models/MedicalRecord';
-import { EncryptionService } from '../utils/encryption';
-import { RecordAccessLevel } from '../types';
+import { AuthRequest } from '../middleware/auth.js';
+import MedicalRecord from '../models/MedicalRecord.js';
+import { EncryptionService } from '../utils/encryption.js';
+import { RecordAccessLevel } from '../types/index.js';
 
 export class MedicalRecordController {
   static async createRecord(req: AuthRequest, res: Response): Promise<void> {

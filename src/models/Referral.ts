@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { IReferral, CasePriority, ReferralStatus } from '../types';
+import { IReferral, CasePriority, ReferralStatus } from '../types/index.js';
 
 const referralSchema = new Schema<IReferral>({
   referralId: {

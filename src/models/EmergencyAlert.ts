@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { IEmergencyAlert, CasePriority } from '../types';
+import { IEmergencyAlert, CasePriority } from '../types/index.js';
 
 const emergencyAlertSchema = new Schema<IEmergencyAlert>({
   alertId: {

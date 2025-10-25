@@ -1,8 +1,8 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/auth';
-import Referral from '../models/Referral';
-import Case from '../models/Case';
-import { ReferralStatus, CaseStatus } from '../types';
+import { AuthRequest } from '../middleware/auth.js';
+import Referral from '../models/Referral.js';
+import Case from '../models/Case.js';
+import { ReferralStatus, CaseStatus } from '../types/index.js';
 
 export class ReferralController {
   static async createReferral(req: AuthRequest, res: Response): Promise<void> {

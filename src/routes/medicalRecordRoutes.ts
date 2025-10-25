@@ -1,8 +1,8 @@
 import express from 'express';
-import { MedicalRecordController } from '../controllers/medicalRecordController';
-import { authenticate, authorize } from '../middleware/auth';
-import { auditLog } from '../middleware/auditLogger';
-import { UserRole } from '../types';
+import { MedicalRecordController } from '../controllers/medicalRecordController.js';
+import { authenticate, authorize } from '../middleware/auth.js';
+import { auditLog } from '../middleware/auditLogger.js';
+import { UserRole } from '../types/index.js';
 
 const router = express.Router();
 

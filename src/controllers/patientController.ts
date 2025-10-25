@@ -1,6 +1,6 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/auth';
-import Patient from '../models/Patient';
+import { AuthRequest } from '../middleware/auth.js';
+import Patient from '../models/Patient.js';
 
 export class PatientController {
   static async createPatient(req: AuthRequest, res: Response): Promise<void> {

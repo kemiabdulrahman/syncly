@@ -1,6 +1,6 @@
 import mongoose, { Schema } from 'mongoose';
 import bcrypt from 'bcryptjs';
-import { IHealthcareWorker, UserRole } from '../types';
+import { IHealthcareWorker, UserRole } from '../types/index.js';
 
 const healthcareWorkerSchema = new Schema<IHealthcareWorker>({
   email: {

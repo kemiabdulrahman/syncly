@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { JWTService } from '../utils/jwt';
-import { UserRole } from '../types';
-import HealthcareWorker from '../models/HealthcareWorker';
+import { JWTService } from '../utils/jwt.js';
+import { UserRole } from '../types/index.js';
+import HealthcareWorker from '../models/HealthcareWorker.js';
 
 export interface AuthRequest extends Request {
   user?: {
