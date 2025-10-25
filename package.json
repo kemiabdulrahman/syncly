@@ -8,7 +8,14 @@
     "build": "tsc",
     "start": "node dist/index.js"
   },
-  "keywords": ["telemedicine", "healthcare", "real-time", "collaboration", "socket.io"],
+  "type": "module",
+  "keywords": [
+    "telemedicine",
+    "healthcare",
+    "real-time",
+    "collaboration",
+    "socket.io"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {

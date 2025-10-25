@@ -1,7 +1,7 @@
 import express from 'express';
-import { DiscussionController } from '../controllers/discussionController';
-import { authenticate } from '../middleware/auth';
-import { auditLog } from '../middleware/auditLogger';
+import { DiscussionController } from '../controllers/discussionController.js';
+import { authenticate } from '../middleware/auth.js';
+import { auditLog } from '../middleware/auditLogger.js';
 
 const router = express.Router();
 

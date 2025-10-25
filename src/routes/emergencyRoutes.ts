@@ -1,7 +1,7 @@
 import express from 'express';
-import { EmergencyController } from '../controllers/emergencyController';
-import { authenticate } from '../middleware/auth';
-import { auditLog } from '../middleware/auditLogger';
+import { EmergencyController } from '../controllers/emergencyController.js';
+import { authenticate } from '../middleware/auth.js';
+import { auditLog } from '../middleware/auditLogger.js';
 
 const router = express.Router();
 
