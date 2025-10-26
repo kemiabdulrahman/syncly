@@ -6,6 +6,9 @@ import { SocketService } from './services/socketService.js';
 import { NotificationService } from './services/notificationService.js';
 import { setNotificationService } from './controllers/notificationController.js';
 
+// Import Swagger
+import { swaggerUi, swaggerSpec } from './swagger/index.js';
+
 // Import routes
 import authRoutes from './routes/authRoutes.js';
 import patientRoutes from './routes/patientRoutes.js';
@@ -60,6 +63,21 @@ export class App {
       });
     });
 
+    // Swagger API Documentation
+    this.app.use('/api-docs', swaggerUi.serve);
+    this.app.get('/api-docs', swaggerUi.setup(swaggerSpec, {
+      explorer: true,
+      customCss: '.swagger-ui .topbar { display: none }',
+      customSiteTitle: 'Telemedicine Platform API',
+      customfavIcon: '/favicon.ico'
+    }));
+
+    // Swagger JSON endpoint
+    this.app.get('/api-docs.json', (req, res) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.send(swaggerSpec);
+    });
+
     // API routes
     this.app.use('/api/auth', authRoutes);
     this.app.use('/api/patients', patientRoutes);
@@ -107,12 +125,14 @@ export class App {
       console.log(`   HTTP Server: http://localhost:${port}`);
       console.log(`   WebSocket Server: ws://localhost:${port}`);
       console.log(`   Environment: ${process.env.NODE_ENV || 'development'}`);
-      console.log(`\n📋 Available endpoints:`);
+      console.log(`\n📚 API Documentation:`);
+      console.log(`   Swagger UI: http://localhost:${port}/api-docs`);
+      console.log(`   OpenAPI JSON: http://localhost:${port}/api-docs.json`);
+      console.log(`\n📋 Quick Access:`);
       console.log(`   GET  /health - Health check`);
       console.log(`   POST /api/auth/register - Register new healthcare worker`);
       console.log(`   POST /api/auth/login - Login`);
-      console.log(`   GET  /api/auth/profile - Get user profile`);
-      console.log(`   \n   See route files for complete API documentation\n`);
+      console.log(`   GET  /api/auth/profile - Get user profile\n`);
     });
   }
 
