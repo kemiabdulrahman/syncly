@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { IAuditLog } from '../types/index.js';
+import { IAuditLog } from '../types/index.ts';
 
 const auditLogSchema = new Schema<IAuditLog>({
   userId: {

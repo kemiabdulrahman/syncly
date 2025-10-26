@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import HealthcareWorker from '../models/HealthcareWorker.js';
-import { JWTService } from '../utils/jwt.js';
-import { AuthRequest } from '../middleware/auth.js';
+import HealthcareWorker from '../models/HealthcareWorker.ts';
+import { JWTService } from '../utils/jwt.ts';
+import { AuthRequest } from '../middleware/auth.ts';
 
 export class AuthController {
   static async register(req: Request, res: Response): Promise<void> {

@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { IMedicalRecord, RecordAccessLevel } from '../types/index.js';
+import { IMedicalRecord, RecordAccessLevel } from '../types/index.ts';
 
 const medicalRecordSchema = new Schema<IMedicalRecord>({
   recordId: {

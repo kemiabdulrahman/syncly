@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { ICase, CaseStatus, CasePriority } from '../types/index.js';
+import { ICase, CaseStatus, CasePriority } from '../types/index.ts';
 
 const caseSchema = new Schema<ICase>({
   caseId: {

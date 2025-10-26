@@ -1,6 +1,6 @@
 import { Response, NextFunction } from 'express';
-import { AuthRequest } from './auth.js';
-import AuditLog from '../models/AuditLog.js';
+import { AuthRequest } from './auth.ts';
+import AuditLog from '../models/AuditLog.ts';
 
 export const auditLog = (action: string, resourceType: string) => {
   return async (req: AuthRequest, res: Response, next: NextFunction): Promise<void> => {
