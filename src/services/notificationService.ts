@@ -1,5 +1,5 @@
 import { createClient, RedisClientType } from 'redis';
-import { SocketService } from './socketService.ts';
+import { SocketService } from './socketService.js';
 
 export interface Notification {
   id: string;

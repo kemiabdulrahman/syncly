@@ -1,7 +1,7 @@
 import { Server as HTTPServer } from 'http';
 import { Server, Socket } from 'socket.io';
-import { JWTService } from '../utils/jwt.ts';
-import HealthcareWorker from '../models/HealthcareWorker.ts';
+import { JWTService } from '../utils/jwt.js';
+import HealthcareWorker from '../models/HealthcareWorker.js';
 
 interface AuthenticatedSocket extends Socket {
   userId?: string;

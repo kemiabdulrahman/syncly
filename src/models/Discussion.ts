@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { IDiscussion } from '../types/index.ts';
+import { IDiscussion } from '../types/index.js';
 
 const discussionSchema = new Schema<IDiscussion>({
   case: {

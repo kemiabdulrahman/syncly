@@ -1,7 +1,7 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/auth.ts';
-import EmergencyAlert from '../models/EmergencyAlert.ts';
-import { CasePriority } from '../types/index.ts';
+import { AuthRequest } from '../middleware/auth.js';
+import EmergencyAlert from '../models/EmergencyAlert.js';
+import { CasePriority } from '../types/index.js';
 
 export class EmergencyController {
   static async createAlert(req: AuthRequest, res: Response): Promise<void> {

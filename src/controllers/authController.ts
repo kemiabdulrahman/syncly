@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import HealthcareWorker from '../models/HealthcareWorker.ts';
-import { JWTService } from '../utils/jwt.ts';
-import { AuthRequest } from '../middleware/auth.ts';
+import HealthcareWorker from '../models/HealthcareWorker.js';
+import { JWTService } from '../utils/jwt.js';
+import { AuthRequest } from '../middleware/auth.js';
 
 export class AuthController {
   static async register(req: Request, res: Response): Promise<void> {
@@ -39,7 +39,7 @@ export class AuthController {
 
       // Generate token
       const token = JWTService.generateToken({
-        userId: user._id.toString(),
+        userId: (user._id as any).toString(),
         email: user.email,
         role: user.role
       });
@@ -90,7 +90,7 @@ export class AuthController {
 
       // Generate token
       const token = JWTService.generateToken({
-        userId: user._id.toString(),
+        userId: (user._id as any).toString(),
         email: user.email,
         role: user.role
       });

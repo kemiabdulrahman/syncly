@@ -1,7 +1,7 @@
 import { Response } from 'express';
-import { AuthRequest } from '../middleware/auth.ts';
-import Discussion from '../models/Discussion.ts';
-import Case from '../models/Case.ts';
+import { AuthRequest } from '../middleware/auth.js';
+import Discussion from '../models/Discussion.js';
+import Case from '../models/Case.js';
 
 export class DiscussionController {
   static async getDiscussion(req: AuthRequest, res: Response): Promise<void> {
